@@ -779,12 +779,11 @@ def render_exam_page():
                 end_time = time.time()
                 status_placeholder.success(f"✅ 题目生成完成！耗时：{end_time - start_time:.2f}秒")
                 
-                # 显示题目和答案（用st.markdown确保LaTeX正确渲染）
-                for i, (q, a) in enumerate(zip(questions, answers), 1):
-                    with st.expander(f"题目 {i}"):
-                        st.markdown(q)
-                    with st.expander(f"参考答案 {i}"):
-                        st.markdown(a)
+                # 只显示题目，不显示参考答案
+                for i, q in enumerate(questions, 1):
+                    st.markdown(f"### 题目 {i}")
+                    st.markdown(q)
+                    st.markdown("---")
                 
                 # 导出到Word文档
                 try:
