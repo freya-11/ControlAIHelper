@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+.cache/
+*.log
+.streamlit/secrets.toml
+.DS_Store
+*.swp
+*.swo
+*~

@@ -1,0 +1,10 @@
+streamlit
+numpy
+scipy
+control==0.10.2
+python-docx
+reportlab
+volcengine-python-sdk[ark]
+spire.doc
+matplotlib
+requests
